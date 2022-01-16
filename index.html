@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../templates/style.css">
+    <title>Document</title>
+</head>
+<style>
+    body{ 
+        background-image: url(../image/pexels-hasan-albari-1209435.jpg);
+        background-color: burlywood;
+        background-size: cover;
+    }
+    h1{
+        color: blanchedalmond;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
+<body>
+    <h1>heart falier detection</h1>
+    <div class="login">
+        <center>
+            <form action="{{url_for('predict')}}" method="post">
+            <h1>Enter the features value</h1>
+            <input type="text" name="Age" placeholder="Age" required="required"> <br>
+            <input type="text" name="Sex" placeholder="Sex" required=required/><br>
+            <input type="text" name="cp" placeholder="cp" required=required><br>
+            <input type="text" name="BP" placeholder="BP" required=required><br>
+            <input type="text" name="Cholesterol" placeholder="Cholesterol" required=required><br>
+            <input type="text"name="FastingBS" placeholder="FastingBS" required=required><br>
+            <input type="text"name="ECG" placeholder="ECG" required=required><br>
+            <input type="text"name="MaxHR" placeholder="MaxHR" required=required><br>
+            <input type="text"name="exercise" placeholder="exercise" required=required><br>
+            <input type="text"name="Oldpeak" placeholder="Oldpeak" required=required><br>
+            <input type="text"name="ST_Slope" placeholder="ST_Slope" required=required><br>
+
+            <!-- Show button -->
+        <div class="button_cont" align="center">
+            <a class="button_css" href="http://bit.ly/breast-cancer-ml-project" target="_blank" rel="nofollow noopener">
+            <button type="submit" class="btn btn-primary btn-block btn-large">
+                <strong>predect heart failure</strong>
+            </button>
+        </a>
+        </div>
+
+        
+
+            <!-- 'Age', 'Sex', 'cp', 'BP', 'Cholesterol', 'FastingBS', 'ECG', 'MaxHR',
+            'exercise', 'Oldpeak', 'ST_Slope', 'target' -->
+
+        </form>>
+        </center>
+
+        <div>
+            <center>
+        <h1>{{ prediction_text }}</h1>
+            </center>
+        </div>
+
+    </div>
+
+</body>
+</html>
